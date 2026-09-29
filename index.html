@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>探索者お題メーカー</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>🎲 探索者お題メーカー</h1>
+    <p class="subtitle">ボタンを押して、今日作るキャラクターの運命を決めよう。</p>
+
+    <button id="generateBtn">お題を生成する</button>
+
+    <div id="resultCard" class="card hidden">
+      
+      <h2>📋 決定された探索者</h2>
+
+      <!-- 外見・ルーツ -->
+      <div class="section">
+        <h3>👤 外見・ルーツ</h3>
+        <div class="grid">
+          <div><span>国籍 / ルーツ</span><strong id="nationality">-</strong></div>
+          <div><span>髪の色</span><strong id="hairColor">-</strong></div>
+          <div><span>目の色</span><strong id="eyeColor">-</strong></div>
+        </div>
+      </div>
+
+      <!-- 能力値 -->
+      <div class="section">
+        <h3>🎲 能力値 (ステータス)</h3>
+        <div class="status-grid" id="statusGrid">
+          <!-- JSで動的生成 -->
+        </div>
+      </div>
+
+      <!-- 指定条件 -->
+      <div class="section">
+        <h3>⚠️ 縛り・指定条件</h3>
+        <div class="grid">
+          <div><span>担当HO</span><strong id="hoNumber" class="highlight">-</strong></div>
+          <div><span>必修技能 (1つ)</span><strong id="mustSkill" class="highlight">-</strong></div>
+          <div><span>感情ベース</span><strong id="emotion" class="highlight">-</strong></div>
+        </div>
+      </div>
+
+      <!-- フレーバー要素 -->
+      <div class="section">
+        <h3>💬 フレーバー</h3>
+        <div class="grid">
+          <div><span>一人称</span><strong id="firstPerson">-</strong></div>
+          <div><span>口調</span><strong id="tone">-</strong></div>
+        </div>
+      </div>
+
+      <!-- 共有・コピーボタン -->
+      <div class="share-actions">
+        <button id="copyBtn" class="sub-btn">📋 結果をテキストでコピー</button>
+        <button id="shareXBtn" class="x-btn">𝕏 で共有する</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
